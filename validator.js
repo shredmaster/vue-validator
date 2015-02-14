@@ -167,6 +167,7 @@
 					}.bind(this));
 				}
 
+				vm.$emit("validated", this);
 				vm.$set('validator.'+model+'.valid',valid);
 				vm.$set('validator.'+model+'.invalid',vm.$get('validator.'+model+'.modified') && !valid);
 
